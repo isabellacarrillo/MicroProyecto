@@ -112,7 +112,18 @@ function generateCards() {
     time.reload
     generateCards();
     startTimeragain();
+
        
+  }
+
+  function startTimeragain(){
+    if (tiempoRestante==0){
+        tiempoRestante=180;
+        document.getElementById("tiempo").innerHTML = tiempoRestante;
+        tiempoRestante--;
+        setTimeout(startTimeragain,1000);
+
+    }
   }
 
 
