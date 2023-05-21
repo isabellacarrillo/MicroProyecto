@@ -115,7 +115,6 @@ function generateCards() {
 
        
   }
-
   function startTimeragain(){
     if (tiempoRestante==0){
         tiempoRestante=180;
