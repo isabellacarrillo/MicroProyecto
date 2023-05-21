@@ -4,6 +4,8 @@ let card1 , card2;
 let lockBoard= false;
 let score  = 0;
 const form = document.querySelector('form');
+let tiempoRestante = 180;
+const time = document.getElementById("starter");
 
 
 form.addEventListener('submit',(e) => {
@@ -54,6 +56,7 @@ function generateCards() {
     }
   }
   
+
   function flipCard() {
     if (lockBoard) return;
     if (this === card1) return;
@@ -70,7 +73,6 @@ function generateCards() {
     document.querySelector(".score").textContent = score;
     lockBoard = true;
     checkForMatch();
-    temporizador();
    
   }
   
@@ -107,27 +109,28 @@ function generateCards() {
     score = 0;
     document.querySelector(".score").textContent = score;
     Container.innerHTML = "";
+    time.reload
     generateCards();
-    
-     
+    startTimeragain();
+       
   }
 
-  function timesup(){
+
+function timesup(){
+    alert("Time's up! Your score is " + score);
     document.querySelector(".score").textContent = score;
     document.querySelector(".time").textContent = "Time's Up!";
-
+    document.querySelector(".time").style.color = "red";
   }
- 
   
 function temporizador() {
-    tiempoRestante = 180;
     cuentaRegresiva = setInterval(() => {
       tiempoRestante--;
+      timer.innerHTML = "Time: " + tiempoRestante;
       if (tiempoRestante == 0  ) {
         clearInterval(cuentaRegresiva);
         timesup();
       }
-      timer.innerHTML = "Time: " + tiempoRestante;
     }, 1000);
   }
 

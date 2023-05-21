@@ -49,6 +49,17 @@ p{
  
 }
 
+.actions2{
+    display: flex;
+    justify-content:center;
+}
+
+.actions2 button{
+    padding: 8px 16px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
 .container {
     display: grid;
     justify-content: center;
