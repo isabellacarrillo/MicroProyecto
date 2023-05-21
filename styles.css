@@ -1,0 +1,117 @@
+body {
+    width: 100%;
+    height: 100%;
+    background:orange;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+.namebracket{
+    text-align: center;
+    font-size: 20px;
+}
+
+input{
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+
+}
+
+.button1{
+    width: 100px;
+    height: 35px; 
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.actions{
+    display: flex;
+    justify-content:flex-end;
+   
+}
+.actions button {
+    padding: 8px 16px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #282A3A;
+    color: #fff;
+ 
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-gap:16px;
+    grid-template-columns: repeat(6, 140px);
+    grid-template-rows: repeat(2,calc(140px/2*3));
+}
+
+.card {
+  height:calc(140px/2*3);
+  width:140px;
+  border-radius:10px;
+  background-color:white;
+  position:relative;
+  transform-style: preserve-3d;
+  transition: all 0.5 ease-in-out;
+}
+
+.front-image {
+    width:60px;
+    height:60px;
+   
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.front,
+ .back {
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background:#282A3A;
+    backface-visibility: hidden;
+}
+.card .back {
+  background-position: center center;
+  background-size: cover;
+  backface-visibility: hidden;
+ 
+}
+
+.card .front {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .front {
+    transform: rotateY(180deg);
+}
+
+.tiempo{
+    font-size: 2rem;
+    color: #282A3A;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (min-width:768px){
+    
+}
+
+@media (min-width:1200px){
+   
+}
