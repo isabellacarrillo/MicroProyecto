@@ -131,7 +131,6 @@ function timesup(){
     alert("Time's up! Your score is " + score);
     document.querySelector(".score").textContent = score;
     document.querySelector(".time").textContent = "Time's Up!";
-    document.querySelector(".time").style.color = "red";
   }
   
 function temporizador() {
